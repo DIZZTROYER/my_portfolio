@@ -47,6 +47,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cyber: {
+          green: "hsl(var(--cyber-green))",
+          "green-glow": "hsl(var(--cyber-green-glow))",
+          blue: "hsl(var(--cyber-blue))",
+          "blue-glow": "hsl(var(--cyber-blue-glow))",
+          dark: "hsl(var(--cyber-dark))",
+          darker: "hsl(var(--cyber-darker))",
+          gray: "hsl(var(--cyber-gray))",
+          "light-gray": "hsl(var(--cyber-light-gray))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +67,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-cyber": "var(--gradient-cyber)",
+        "gradient-dark": "var(--gradient-dark)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        "cyber": "var(--shadow-cyber)",
+        "cyber-hover": "var(--shadow-cyber-hover)",
+        "blue": "var(--shadow-blue)",
+      },
+      textShadow: {
+        "glow": "var(--glow-text)",
+      },
+      transitionTimingFunction: {
+        "smooth": "var(--transition-smooth)",
+        "bounce": "var(--transition-bounce)",
       },
       borderRadius: {
         lg: "var(--radius)",
