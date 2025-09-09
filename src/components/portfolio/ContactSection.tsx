@@ -11,6 +11,7 @@ export const ContactSection = () => {
       href: "mailto:princeheriatge1@gmail.com",
       description: "Get in touch for professional inquiries"
     },
+    
     {
       icon: Phone,
       title: "Phone",
