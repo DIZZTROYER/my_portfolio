@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { Sword, Wrench, Award } from "lucide-react";
 
 export const SkillsSection = () => {
@@ -10,15 +9,15 @@ export const SkillsSection = () => {
       title: "Offensive Security",
       color: "cyber-green",
       skills: [
-        { name: "Penetration Testing", level: 95 },
-        { name: "Red Teaming", level: 90 },
-        { name: "Adversary Emulation", level: 88 },
-        { name: "Vulnerability Assessment", level: 92 },
-        { name: "Ethical Hacking", level: 94 },
-        { name: "Web Application Testing", level: 90 },
-        { name: "Network Troubleshooting", level: 85 },
-        { name: "Python Scripting", level: 93 },
-        { name: "PowerShell", level: 80 }
+        "Penetration Testing",
+        "Red Teaming", 
+        "Adversary Emulation",
+        "Vulnerability Assessment",
+        "Ethical Hacking",
+        "Web Application Testing",
+        "Network Troubleshooting",
+        "Python Scripting",
+        "PowerShell"
       ]
     },
     {
@@ -26,13 +25,13 @@ export const SkillsSection = () => {
       title: "Tools & Frameworks",
       color: "cyber-blue",
       skills: [
-        { name: "Metasploit", level: 92 },
-        { name: "Burp Suite", level: 95 },
-        { name: "Kali Linux", level: 98 },
-        { name: "Nmap", level: 90 },
-        { name: "Nessus", level: 88 },
-        { name: "Cobalt Strike", level: 85 },
-        { name: "CAIDO", level: 82 }
+        "Metasploit",
+        "Burp Suite",
+        "Kali Linux", 
+        "Nmap",
+        "Nessus",
+        "Cobalt Strike",
+        "CAIDO"
       ]
     },
     {
@@ -40,29 +39,19 @@ export const SkillsSection = () => {
       title: "Compliance & Leadership",
       color: "accent",
       skills: [
-        { name: "Project Management", level: 87 },
-        { name: "Team Leadership", level: 90 },
-        { name: "Mentoring", level: 85 },
-        { name: "Data Analysis", level: 88 },
-        { name: "Security Policy Development", level: 85 },
-        { name: "NIST Framework", level: 82 },
-        { name: "ISO 27001", level: 80 },
-        { name: "Communication", level: 92 },
-        { name: "Public Speaking", level: 78 }
+        "Project Management",
+        "Team Leadership",
+        "Mentoring", 
+        "Data Analysis",
+        "Security Policy Development",
+        "NIST Framework",
+        "ISO 27001",
+        "Communication",
+        "Public Speaking"
       ]
     }
   ];
 
-  const getProgressColor = (color: string) => {
-    switch (color) {
-      case "cyber-green":
-        return "bg-cyber-green";
-      case "cyber-blue":
-        return "bg-cyber-blue";
-      default:
-        return "bg-accent";
-    }
-  };
 
   return (
     <section className="py-20 bg-cyber-darker">
@@ -89,22 +78,15 @@ export const SkillsSection = () => {
                 </CardHeader>
                 
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="grid grid-cols-1 gap-3">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                          <Badge variant="secondary" className="text-xs bg-cyber-gray text-cyber-light-gray">
-                            {skill.level}%
-                          </Badge>
-                        </div>
-                        <div className="w-full bg-cyber-gray rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full transition-all duration-1000 ease-out ${getProgressColor(category.color)}`}
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
+                      <Badge 
+                        key={skillIndex} 
+                        variant="secondary" 
+                        className={`text-sm font-medium py-2 px-4 bg-${category.color}/10 text-${category.color} border border-${category.color}/20 hover:bg-${category.color}/20 transition-all duration-300`}
+                      >
+                        {skill}
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>

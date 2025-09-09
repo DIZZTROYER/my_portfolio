@@ -5,17 +5,21 @@ import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
 import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
 import { EducationSection } from "@/components/portfolio/EducationSection";
 import { ContactSection } from "@/components/portfolio/ContactSection";
+import { MouseFollowPaint } from "@/components/MouseFollowPaint";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <EducationSection />
-      <ContactSection />
+    <div className="min-h-screen relative">
+      <MouseFollowPaint />
+      <div className="relative z-10">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <EducationSection />
+        <ContactSection />
+      </div>
     </div>
   );
 };

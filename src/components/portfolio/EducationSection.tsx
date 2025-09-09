@@ -5,12 +5,9 @@ import { GraduationCap, Award, Shield, Cloud, Network, Lock } from "lucide-react
 export const EducationSection = () => {
   const certifications = [
     { name: "AWC Cloud Practitioner", icon: Cloud, color: "cyber-blue" },
-    { name: "CEH (Certified Ethical Hacker)", icon: Shield, color: "cyber-green" },
     { name: "ISC2 Certified in Cybersecurity (CC)", icon: Lock, color: "cyber-green" },
     { name: "Google Cybersecurity Professional", icon: Shield, color: "cyber-blue" },
-    { name: "CompTIA Network+", icon: Network, color: "accent" },
     { name: "CompTIA Security+", icon: Shield, color: "cyber-green" },
-    { name: "Cisco Ethical Hacker", icon: Shield, color: "cyber-blue" },
     { name: "OBTranslate Prompt Engineering", icon: Award, color: "accent" }
   ];
 
@@ -97,7 +94,7 @@ export const EducationSection = () => {
                 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyber-green mb-2">8+</div>
+                    <div className="text-3xl font-bold text-cyber-green mb-2">5+</div>
                     <p className="text-muted-foreground">Professional Certifications</p>
                   </div>
                   <div className="text-center">
