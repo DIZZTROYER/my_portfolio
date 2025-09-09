@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Phone } from "lucide-react";
+import { GlitchText } from "@/components/GlitchText";
 
 export const HeroSection = () => {
   return (
@@ -17,9 +18,9 @@ export const HeroSection = () => {
           </h1>
           
           <div className="text-xl md:text-2xl text-cyber-light-gray mb-8 font-light">
-            <span className="text-cyber-green font-medium">Cybersecurity Engineer</span> | 
-            <span className="text-cyber-blue font-medium"> Penetration Tester</span> | 
-            <span className="text-cyber-green font-medium"> Ethical Hacker</span>
+            <GlitchText text="Cybersecurity Engineer" className="text-cyber-green font-medium" glitchIntensity={0.08} /> | 
+            <GlitchText text=" Penetration Tester" className="text-cyber-blue font-medium" glitchIntensity={0.06} /> | 
+            <GlitchText text=" Ethical Hacker" className="text-cyber-green font-medium" glitchIntensity={0.07} />
           </div>
           
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
