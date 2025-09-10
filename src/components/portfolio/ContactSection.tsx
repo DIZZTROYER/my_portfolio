@@ -140,14 +140,26 @@ export const ContactSection = () => {
                   </p>
                   
                   <div className="space-y-4">
-                    <Button 
-                      size="lg" 
-                      onClick={handleSendEmail}
-                      className="w-full bg-cyber-green hover:bg-cyber-green-glow text-cyber-dark font-semibold py-3 transition-all duration-300 hover:shadow-cyber transform hover:scale-105"
-                    >
-                      <Mail className="w-5 h-5 mr-2" />
-                      Send Me an Email
-                    </Button>
+                    <div className="grid grid-cols-2 gap-3">
+                      <Button 
+                        size="lg" 
+                        onClick={handleSendEmail}
+                        className="bg-cyber-green hover:bg-cyber-green-glow text-cyber-dark font-semibold py-3 transition-all duration-300 hover:shadow-cyber transform hover:scale-105"
+                      >
+                        <Mail className="w-4 h-4 mr-2" />
+                        Email Me
+                      </Button>
+                      
+                      <Button 
+                        variant="outline" 
+                        size="lg" 
+                        onClick={handleCopyEmail}
+                        className="border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-cyber-dark font-semibold py-3 transition-all duration-300 hover:shadow-cyber transform hover:scale-105"
+                      >
+                        <Copy className="w-4 h-4 mr-2" />
+                        Copy Email
+                      </Button>
+                    </div>
                     
                     <Button 
                       variant="outline" 
