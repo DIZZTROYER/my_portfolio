@@ -1,50 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, Github, MessageSquare, Send } from "lucide-react";
+import { Mail, Phone, Github, MessageSquare, Send, Copy, ExternalLink } from "lucide-react";
 
 export const ContactSection = () => {
   const handleSendEmail = () => {
     const email = 'princeheriatge1@gmail.com';
     const subject = 'Professional Inquiry - Cybersecurity Services';
-    const body = `Hello Mojetioluwa,
-
-I am interested in discussing cybersecurity services with you.
-
-Best regards`;
+    const body = 'Hello Mojetioluwa,\n\nI am interested in discussing cybersecurity services with you.\n\nBest regards';
     
-    // Try multiple methods for better compatibility
+    // Simple mailto approach
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Try to open email client
+    window.location.href = mailtoLink;
+  };
+
+  const handleCopyEmail = async () => {
+    const email = 'princeheriatge1@gmail.com';
     try {
-      // Method 1: Try mailto with proper encoding
-      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Check if we're in a browser environment
-      if (typeof window !== 'undefined') {
-        window.location.href = mailtoLink;
-        
-        // Fallback: Show alert with email info if mailto doesn't work
-        setTimeout(() => {
-          const fallbackMessage = `If your email client didn't open, please send an email to:\r
-\r
-Email: ${email}\r
-Subject: ${subject}`;
-          // This alert will only show if the mailto didn't successfully redirect
-          console.log('Email client should have opened. If not, use:', email);
-        }, 1000);
-      }
+      await navigator.clipboard.writeText(email);
+      alert('✅ Email address copied to clipboard!');
     } catch (error) {
-      // Fallback: Copy email to clipboard and show notification
-      console.error('Email client failed to open:', error);
-      
-      // Try to copy email to clipboard
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(email).then(() => {
-          alert(`Email address copied to clipboard: ${email}`);
-        }).catch(() => {
-          alert(`Please send an email to: ${email}`);
-        });
-      } else {
-        alert(`Please send an email to: ${email}`);
-      }
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('✅ Email address copied to clipboard!');
     }
   };
 
