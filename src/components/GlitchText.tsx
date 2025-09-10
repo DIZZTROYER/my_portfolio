@@ -30,13 +30,13 @@ export const GlitchText = ({ text, className = '', glitchIntensity = 0.1 }: Glit
         
         setDisplayText(glitchText);
         
-        // Reset after short duration
+        // Reset after short duration (much faster)
         setTimeout(() => {
           setDisplayText(text);
           setIsGlitching(false);
-        }, 100 + Math.random() * 200);
+        }, 50 + Math.random() * 100);
       }
-    }, 2000 + Math.random() * 3000); // Random interval between 2-5 seconds
+    }, 500 + Math.random() * 1000); // Random interval between 0.5-1.5 seconds (much faster)
 
     return () => clearInterval(glitchInterval);
   }, [text, glitchIntensity]);
@@ -47,7 +47,7 @@ export const GlitchText = ({ text, className = '', glitchIntensity = 0.1 }: Glit
       style={{
         textShadow: isGlitching ? '2px 0 #ff0000, -2px 0 #00ff00' : undefined,
         filter: isGlitching ? 'blur(1px)' : undefined,
-        transition: 'all 0.1s ease'
+        transition: 'all 0.05s ease'
       }}
     >
       {displayText}
