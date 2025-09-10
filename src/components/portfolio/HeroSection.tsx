@@ -82,6 +82,7 @@ export const HeroSection = () => {
               <Button 
                 variant="default" 
                 size="lg" 
+                onClick={handleViewProjects}
                 className="bg-cyber-green hover:bg-cyber-green-glow text-cyber-dark font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-cyber transform hover:scale-105"
               >
                 View Projects
@@ -90,6 +91,7 @@ export const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
+                onClick={handleDownloadResume}
                 className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-dark font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-blue transform hover:scale-105"
               >
                 Download Resume
