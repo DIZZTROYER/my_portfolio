@@ -4,7 +4,7 @@ import { GraduationCap, Award, Shield, Cloud, Network, Lock } from "lucide-react
 
 export const EducationSection = () => {
   const certifications = [
-    { name: "AWC Cloud Practitioner", icon: Cloud, color: "cyber-blue" },
+    { name: "AWS Cloud Practitioner", icon: Cloud, color: "cyber-blue" },
     { name: "ISC2 Certified in Cybersecurity (CC)", icon: Lock, color: "cyber-green" },
     { name: "Google Cybersecurity Professional", icon: Shield, color: "cyber-blue" },
     { name: "CompTIA Security+", icon: Shield, color: "cyber-green" },
