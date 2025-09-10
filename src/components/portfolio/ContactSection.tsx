@@ -179,7 +179,7 @@ export const ContactSection = () => {
           {/* Footer */}
           <div className="text-center mt-16 pt-8 border-t border-cyber-gray">
             <p className="text-muted-foreground">
-              © 2024 Mojetioluwa Bolaji-Busola. All rights reserved. | 
+              © 2025 Mojetioluwa Bolaji-Busola. All rights reserved. | 
               <span className="text-cyber-green ml-2">Cybersecurity Professional</span>
             </p>
           </div>
