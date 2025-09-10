@@ -1,0 +1,16 @@
+node_modules
+.git
+.vscode
+.env.local
+.env.*.local
+.DS_Store
+*.log
+coverage/
+.nyc_output
+dist/
+build/
+*.tgz
+*.tar.gz
+Thumbs.db
+IMPLEMENTATION_SUMMARY.md
+README.md

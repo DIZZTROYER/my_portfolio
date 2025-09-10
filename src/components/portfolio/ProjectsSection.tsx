@@ -12,7 +12,7 @@ export const ProjectsSection = () => {
       technologies: ["Python", "DNS", "Reconnaissance", "Automation"],
       achievements: ["40% reduction in manual effort", "Automated reconnaissance", "Custom tool development"],
       type: "Security Tool",
-      github: "#"
+      github: "https://github.com/DIZZTROYER/DNSROCKS"
     },
     {
       title: "Honeypot Deployment",
@@ -21,7 +21,7 @@ export const ProjectsSection = () => {
       technologies: ["Network Security", "Threat Intelligence", "Monitoring", "Docker"],
       achievements: ["Enhanced threat intelligence", "Attacker behavior analysis", "Simulated vulnerable services"],
       type: "Defense System",
-      github: "#"
+      github: "https://github.com/DIZZTROYER/Dumblepot"
     },
     {
       title: "Security Keylogger",
@@ -30,7 +30,7 @@ export const ProjectsSection = () => {
       technologies: ["Python", "Red Team", "Endpoint Security", "POC"],
       achievements: ["Red team demonstrations", "Security awareness", "Endpoint risk assessment"],
       type: "Red Team Tool",
-      github: "#"
+      github: "https://github.com/DIZZTROYER/EKEYloggeR"
     },
     {
       title: "Intrusion Detection System",
@@ -39,7 +39,7 @@ export const ProjectsSection = () => {
       technologies: ["Python", "Network Monitoring", "Machine Learning", "Log Analysis"],
       achievements: ["60% reduction in analysis time", "Automated threat detection", "Real-time monitoring"],
       type: "Monitoring System",
-      github: "#"
+      github: "https://github.com/DIZZTROYER/intrusion-detection-system"
     },
     {
       title: "PortSwigger Labs Mastery",
@@ -48,7 +48,7 @@ export const ProjectsSection = () => {
       technologies: ["Web Security", "OWASP Top 10", "XSS", "CSRF", "SSRF", "SQLi"],
       achievements: ["40+ labs completed", "OWASP Top 10 expertise", "Advanced web security skills"],
       type: "Skill Development",
-      github: "#"
+      github: "https://github.com/DIZZTROYER/portswigger-labs-solutions"
     }
   ];
 
@@ -68,7 +68,7 @@ export const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-cyber-darker">
+    <section id="projects-section" className="py-20 bg-cyber-darker">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -132,6 +132,7 @@ export const ProjectsSection = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
+                      onClick={() => window.open(project.github, '_blank', 'noopener,noreferrer')}
                       className="flex-1 border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-cyber-dark transition-all duration-300"
                     >
                       <Github className="w-4 h-4 mr-2" />

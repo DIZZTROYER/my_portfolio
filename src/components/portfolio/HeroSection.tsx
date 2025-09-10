@@ -3,6 +3,26 @@ import { Github, Mail, Phone } from "lucide-react";
 import { GlitchText } from "@/components/GlitchText";
 
 export const HeroSection = () => {
+  const handleViewProjects = () => {
+    const projectsSection = document.getElementById('projects-section');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+  };
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/MOJETIOLUWA_BOLAJI_RESUME.pdf';
+    link.download = 'MOJETIOLUWA_BOLAJI_RESUME.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden">
       {/* Animated background elements */}
@@ -60,6 +80,7 @@ export const HeroSection = () => {
             <Button 
               variant="default" 
               size="lg" 
+              onClick={handleViewProjects}
               className="bg-cyber-green hover:bg-cyber-green-glow text-cyber-dark font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-cyber transform hover:scale-105"
             >
               View Projects
@@ -68,6 +89,7 @@ export const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
+              onClick={handleDownloadResume}
               className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-dark font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-blue transform hover:scale-105"
             >
               Download Resume

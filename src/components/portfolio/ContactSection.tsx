@@ -3,6 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Github, MessageSquare, Send } from "lucide-react";
 
 export const ContactSection = () => {
+  const handleSendEmail = () => {
+    window.location.href = 'mailto:princeheriatge1@gmail.com?subject=Professional Inquiry&body=Hello Mojetioluwa,%0D%0A%0D%0AI am interested in discussing...';
+  };
+
+  const handleViewGitHub = () => {
+    window.open('https://github.com/DIZZTROYER', '_blank', 'noopener,noreferrer');
+  };
+
   const contactMethods = [
     {
       icon: Mail,
@@ -107,6 +115,7 @@ export const ContactSection = () => {
                   <div className="space-y-4">
                     <Button 
                       size="lg" 
+                      onClick={handleSendEmail}
                       className="w-full bg-cyber-green hover:bg-cyber-green-glow text-cyber-dark font-semibold py-3 transition-all duration-300 hover:shadow-cyber transform hover:scale-105"
                     >
                       <Mail className="w-5 h-5 mr-2" />
@@ -116,6 +125,7 @@ export const ContactSection = () => {
                     <Button 
                       variant="outline" 
                       size="lg" 
+                      onClick={handleViewGitHub}
                       className="w-full border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-dark font-semibold py-3 transition-all duration-300 hover:shadow-blue transform hover:scale-105"
                     >
                       <Github className="w-5 h-5 mr-2" />
