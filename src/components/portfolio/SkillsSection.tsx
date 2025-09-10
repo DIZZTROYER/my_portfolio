@@ -52,6 +52,7 @@ export const SkillsSection = () => {
     }
   ];
 
+  
 
   return (
     <section className="py-20 bg-cyber-darker">
