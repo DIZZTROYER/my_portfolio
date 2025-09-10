@@ -12,7 +12,7 @@ export const ExperienceSection = () => {
       type: "Current Position",
       achievements: [
         "Conducted advanced penetration tests and red team operations across diverse network environments using Metasploit, Burp Suite, Nmap, Nessus, and Cobalt Strike",
-        "Reduced security incidents by 25% through comprehensive vulnerability assessments",
+        "Reduced security incidents by 85% through comprehensive vulnerability assessments",
         "Performed adversary emulation to simulate real-world cyber threats, identifying critical vulnerabilities",
         "Developed and maintained custom Python scripts for automation, improving efficiency by 96%",
         "Led cross-functional security teams, reducing incident response time and operational costs by 79%",
@@ -42,7 +42,7 @@ export const ExperienceSection = () => {
       type: "Technical Role",
       achievements: [
         "Led cross-functional teams to identify and remediate infrastructure weaknesses",
-        "Achieved 99.97% network uptime through proactive monitoring and rapid issue resolution",
+        "Achieved industry standard 99.999% network uptime through proactive monitoring and rapid issue resolution",
         "Configured network devices for stable campus connectivity with integrated vulnerability assessments",
         "Implemented security best practices across network infrastructure"
       ],
