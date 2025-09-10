@@ -105,12 +105,12 @@ export const HeroSection = () => {
               src="/profile.jpg"
               onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }}
               alt="Mojetioluwa Bolaji-Busola portrait"
-              className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border border-cyber-gray shadow-cyber"
+              className="w-52 h-52 md:w-72 md:h-72 rounded-full object-cover border-2 border-cyber-gray shadow-cyber hover:shadow-cyber-hover transition-all duration-500 hover:rotate-360 hover:border-cyber-green cursor-pointer transform hover:scale-105"
             />
           </div>
         </div>
       </div>
-     
+      
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-cyber-green rounded-full flex justify-center">
