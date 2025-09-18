@@ -39,7 +39,7 @@ export const ProjectsSection = () => {
       technologies: ["Python", "Network Monitoring", "Machine Learning", "Log Analysis"],
       achievements: ["60% reduction in analysis time", "Automated threat detection", "Real-time monitoring"],
       type: "Monitoring System",
-      github: "https://github.com/DIZZTROYER/intrusion-detection-system"
+      github: "https://github.com/DIZZTROYER/XPO"
     },
     {
       title: "PortSwigger Labs Mastery",
