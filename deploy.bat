@@ -11,7 +11,7 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-echo ✅ Dependencies installed successfully!
+echo  Dependencies installed successfully!
 echo.
 
 echo [2/4] Building project...
@@ -21,7 +21,7 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-echo ✅ Project built successfully!
+echo  Project built successfully!
 echo.
 
 echo [3/4] Testing build...
