@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Code, Users } from "lucide-react";
 
+
 export const AboutSection = () => {
   const highlights = [
     {
